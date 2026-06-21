@@ -10,15 +10,19 @@
 
 **What task did you give the agent?**
 
-<!-- Describe the goal you asked the agent to accomplish -->
+I asked Claude to identify three potential edge case inputs that might still break the Glitchy Guesser game and generate a comprehensive suite of pytest tests to verify they work correctly.
 
 **What did the agent do?**
 
 <!-- List the steps the agent took (files edited, commands run, etc.) -->
+Step 1: The agent examined the existing code.
+Step 2: The agent created the test functions for three edge cases.
+Step 3: I runned the updated test_game_logic.py file
 
 **What did you have to verify or fix manually?**
 
 <!-- Describe anything the agent got wrong or that required human review -->
+The agent works well, I manually update my input to verified the code is good.
 
 ---
 
@@ -28,9 +32,11 @@
 
 | Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
 |-----------|-------------|-------------------|--------------|----------------|
-| | | | | |
-| | | | | |
-| | | | | |
+| Negative number input |can you identify potential edge case inputs of negative numbers that might still break the game, and generate a suite of `pytest` cases that verify the game handles these inputs0 |test_parse_negative_number_guess| Passed
+
+| Decimal input |can you identify potential edge case inputs of decimals that might still break the game, and generate a suite of `pytest` cases that verify the game handles these inputs|Passed
+
+| Extremely large integer input |can you identify potential edge case inputs of extremely large values that might still break the game, and generate a suite of `pytest` cases that verify the game handles these inputs|Passed|
 
 ---
 
@@ -43,6 +49,7 @@
 ```
 <!-- Paste the prompt you gave the AI -->
 ```
+can you identify three potential "edge case" inputs (e.g., negative numbers, decimals, or extremely large values) that might still break your game, and generate a suite of `pytest` cases that verify the game handles these inputs
 
 **Linting output before:**
 
